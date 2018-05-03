@@ -1,0 +1,82 @@
+/* footer */
+.footer
+	margin-bottom: 30px
+	padding: 10px 0 20px
+	box-shadow: 0px 3px 3px #696969
+
+	.header-logo__link
+		margin-bottom: 20px
+
+	.header-logo__img
+		max-width: 325px
+
+	.share-counter-common
+		display: none !important
+
+	.link-developer
+		display: block
+
+		&__img
+			display: inline-block
+			width: 90px
+			height: auto
+			max-width: 100%
+
+		&__text
+			display: block
+			font-size: 12px
+			line-height: 14px
+			font-weight: 700
+			color: #000
+			text-decoration: underline
+
+	.header-contacts
+		text-align: right
+
+		&__link
+			text-align: right
+			font-family: Tahoma, sans-serif
+			font-size: 20px
+			font-weight: 700
+
+	&-address,
+	&-shedule,
+	.header-contacts__p
+		display: block
+		margin: 0 0 5px
+		text-align: right
+		font-size: 15px
+		line-height: 20px
+		font-weight: 700
+
++media-breakpoint-down(md)
+	.link-developer
+		text-align: left
+
++media-breakpoint-down(xs)
+	.footer
+		text-align: center
+
+		.header-contacts
+			text-align: center
+
+			&__link
+				text-align: center
+				font-size: 18px
+				line-height: 26px
+
+			&__p
+				text-align: center
+				font-size: 16px
+				line-height: 24px
+
+		&-address,
+		&-shedule
+			text-align: center
+			font-size: 16px
+			line-height: 24px
+
+		.link-developer
+			margin-top: 15px
+			text-align: center
+

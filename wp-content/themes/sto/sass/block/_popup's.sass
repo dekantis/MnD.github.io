@@ -1,0 +1,155 @@
+/* Popup's */
+
+body.hide-scroll
+	height: 100%
+	overflow: hidden
+
+.overlay
+	position: fixed
+	top: 0
+	left: 0
+	z-index: -1
+	width: 100%
+	height: 100vh
+	overflow: auto
+	background-color: rgba(0, 0, 0, 0.3)
+	opacity: 0
+	transition: .25s
+	&_active
+		opacity: 1
+		z-index: 30
+	&__content
+		display: flex
+		justify-content: center
+		align-items: center
+		padding: 50px 0
+		width: 100%
+		min-height: 100vh
+		box-sizing: border-box
+
+.popup-form
+	position: relative
+	display: none
+	width: 700px
+	max-width: calc(100% - 30px)
+	box-sizing: border-box
+	background: #6c757d url("../img/popup-bg.jpg") left center no-repeat
+	background-size: cover
+	box-shadow: 0 0 30px 0 #000
+	opacity: 0
+	transition: .25s
+
+	&_active
+		display: block
+		opacity: 1
+
+	&__wrapper
+		width: 70%
+		margin: 0 0 0 auto
+		padding: 30px 40px 40px
+		box-sizing: border-box
+		text-align: center
+
+	&__close
+		position: absolute
+		top: 0
+		right: 0
+		width: 24px
+		height: 24px
+		font-size: 0
+		background-color: #000
+		border: 2px solid #fff
+		border-radius: 50%
+		box-shadow: 0 0 5px 1px #000
+		transform: translate(50%, -50%)
+		transition: .25s
+		cursor: pointer
+		&::before,
+		&::after
+			content: ''
+			position: absolute
+			top: 50%
+			left: 50%
+			width: 12px
+			height: 3px
+			background-color: #ffffff
+			transform-origin: center
+			transition: .25s
+		&::before
+			transform: translate(-50%, -50%) rotate(45deg)
+		&::after
+			transform: translate(-50%, -50%) rotate(-45deg)
+		&:hover
+			border-color: #fdd42e
+			&::before,
+			&::after
+				background-color: #fdd42e
+
+	&__title
+		text-align: center
+		margin-bottom: 20px
+		font-size: 35px
+		line-height: normal
+		font-weight: 700
+		color: #074742
+		&_upper
+			text-transform: uppercase
+
+	&__fieldset
+		display: block
+		width: 100%
+		padding: 20px 30px
+		box-sizing: border-box
+		border: 5px solid #074742
+
+	&__p
+		margin: 0 0 15px
+		font-size: 17px
+		line-height: normal
+		font-weight: 700
+
+	&__label
+		display: block
+		vertical-align: middle
+		margin: 0 auto 15px
+		width: 80%
+		span
+			display: block
+			margin-bottom: 5px
+			text-align: left
+			font-weight: 700
+			font-size: 14px
+
+	&__input
+		width: 100%
+		text-align: center
+
+	textarea.popup-form__input
+		min-height: 100px
+		resize: none
+
++media-breakpoint-down(md)
+	.popup-form
+		background-position: right center
+
+		&__wrapper
+			width: 85%
+
++media-breakpoint-down(xs)
+	.popup-form
+		&__wrapper
+			padding: 30px 15px 40px
+			width: 100%
+
+		&__title
+			font-size: 26px
+			line-height: 30px
+			
+		&__p
+			font-size: 15px
+
+		&__fieldset
+			padding: 20px 10px
+
+		&__label
+			width: 100%

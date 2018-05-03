@@ -1,0 +1,118 @@
+/* header */
+.header
+	position: relative
+	padding-bottom: 10px
+	background-color: #fafafa
+	box-shadow: 0 3px 3px #696969
+
+	&-logo
+		&__link
+			display: block
+		&__img
+			display: block
+			width: 100%
+			height: auto
+
+	&-address
+		text-align: center
+		//font-size: 16px
+		font-size: 14px
+		//line-height: 20px
+		line-height: 18px
+		font-weight: 700
+		color: #696969
+		&__address
+			margin-bottom: 5px
+		&__link
+			text-decoration: underline
+			color: $link
+
+	&-contacts
+		text-align: right
+		&__link
+			display: block
+			font-size: 20px
+			font-weight: 700
+			color: $link
+			text-decoration: underline
+		.btn
+			margin: 5px 0 10px
+		&__p
+			margin: 0 0 5px
+			font-size: 14px
+			line-height: 14px
+			font-weight: 700
+			a
+				color: $link
+				&:hover
+					color: #0056b3
+
++media-breakpoint-down(lg)
+	.header
+		padding: 5px 0 10px
+		&-address
+			font-size: 13px
+			line-height: 16px
+
+		&-contacts
+			&__link
+				font-size: 18px
+				line-height: 20px
+			&__p
+				font-size: 13px
+
++media-breakpoint-down(md)
+	.header
+		padding: 5px 0 15px
+
+		&-logo
+			margin-bottom: 15px
+
+		&-address
+			margin-bottom: 15px
+			text-align: right
+
+		&-contacts
+			&__link
+				text-align: left
+			&__p:first-of-type
+				text-align: left
+
++media-breakpoint-down(md)
+	.header
+
+		&-logo
+			margin-bottom: 20px
+			&__img
+				max-width: 320px
+				margin: 0 auto
+
+		&-address
+			margin-bottom: 20px
+			text-align: center
+
+		&-contacts
+			text-align: center
+			&__link
+				margin-bottom: 10px
+				text-align: center
+				font-size: 16px
+			.btn
+				margin-bottom: 12px
+			&__p,
+			&__p:first-of-type
+				text-align: center
+			&__p:first-of-type
+				margin-bottom: 10px
+
++media-breakpoint-down(xs)
+	.header-address__address,
+	.header-address__link,
+	.header-contacts__p
+		font-size: 18px
+		line-height: 26px
+
+	.header-contacts__link
+		margin-bottom: 20px
+		font-size: 20px
+		line-height: 24px

@@ -1,0 +1,87 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+html, body
+	height: 100%
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: $default-font
+	overflow-x: hidden
+	input, textarea
+		border: #666 1px solid
+		outline: none
+		&:focus:required:invalid
+			border-color: red
+		&:required:valid
+			border-color: green
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+	&.img-width
+		width: 100%
+
+.text-center
+	text-align: center
+
+input,
+textarea,
+select
+	display: inline-block
+	vertical-align: middle
+	min-height: 34px
+	height: 34px
+	padding: 0 15px
+	box-sizing: border-box
+	font-size: 18px
+	line-height: 34px
+	background-color: #fff
+	border: 1px solid #666
+	border-radius: 5px
+	transition: .25s
+	resize: none
+
+input[type=tel]
+	background: #fff url("../img/icon-phone_gray.png") 8px center no-repeat
+	background-size: 22px
+
+.black
+	color: #000
+
+.red
+	color: #b40804
+
+@import "block/buttons"
+@import "block/popup's"
+@import "block/fixed-phone"
+@import "fixed-link"
+@import "lightbox-custom"
+@import "block/header"
+@import "block/form-bid"
+@import "block/screen-1"
+@import "block/screen-2"
+@import "block/screen-3"
+@import "block/screen-4"
+@import "block/screen-5"
+@import "block/screen-6"
+@import "block/screen-7"
+@import "block/screen-8"
+@import "block/screen-9"
+@import "block/footer"
+
+
+
+@import "media" // Always at the end

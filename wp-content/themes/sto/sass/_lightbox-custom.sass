@@ -1,0 +1,55 @@
+/* lightbox-custom */
+.lightbox
+	&Overlay
+		background-color: rgb(102, 102, 102)
+		opacity: 0.3
+
+	.lb-image
+		border-width: 10px
+		border-radius: 0
+		box-shadow: 0 0 40px 0 #000
+
+.lb-dataContainer
+
+	.lb-details
+		display: none
+
+	.lb-close
+		display: none
+
+.lb-nav
+
+	.lb-close
+		position: absolute
+		top: 0
+		right: 0
+		width: 24px
+		height: 24px
+		font-size: 0
+		background-color: #000
+		border: 2px solid #fff
+		border-radius: 50%
+		box-shadow: 0 0 5px 1px #000
+		transform: translate(50%, -50%)
+		transition: .25s
+		cursor: pointer
+		&::before,
+		&::after
+			content: ''
+			position: absolute
+			top: 50%
+			left: 50%
+			width: 12px
+			height: 3px
+			background-color: #ffffff
+			transform-origin: center
+			transition: .25s
+		&::before
+			transform: translate(-50%, -50%) rotate(45deg)
+		&::after
+			transform: translate(-50%, -50%) rotate(-45deg)
+		&:hover
+			border-color: #fdd42e
+			&::before,
+			&::after
+				background-color: #fdd42e
